@@ -4,7 +4,55 @@
         <Link rel="Stylesheet" type="text/css" href="./mystyle.css">
         <title>Quiz</title>
     </head>
-    <body>
-        <h1 id="demo"></h1>
+    <body class="quizbody">
+        <div class="quiz-container">
+            <h1>How well do you know Georgette?</h1>
+            <h3>Take this quiz to find out</h3>
+            <form>
+                <ol>
+                    <li>
+                        <label for="birthday">What is Georgette's birthday?</label>
+                        <input type="date" id="birthday" name="birthday">
+                    </li>
+                    <li>
+                        <p>What is Georgette's favorite weather?</p>
+                        <input type="radio" id="Summer" name="weather">
+                        <label for="Summer">Summer</label><br>
+                        <input type="radio" id="Spring" name="weather">
+                        <label for="Spring">Spring</label><br>
+                        <input type="radio" id="Autumn" name="weather">
+                        <label for="Autumn">Autumn</label><br>
+                        <input type="radio" id="Winter" name="weather">
+                        <label for="Winter">Winter</label><br>
+                    </li>
+                    <li>
+                        <label for="favcolor">What is Georgette's favorite color?</label>
+                        <input type="color" id="favcolor" name="favcolor">
+                    </li>
+                    <li>
+                        <p>What is Georgette's favorite series?</p>
+                        <input type="radio" id="You" name="favseries">
+                        <label for="You">You</label><br>
+                        <input type="radio" id="Gameofthrones" name="favseries">
+                        <label for="Gameofthrones">Game of thrones</label><br>
+                        <input type="radio" id="Lordoftherings" name="favseries">
+                        <label for="Lordoftherings">Lord of the rings</label><br>
+                        <input type="radio" id="Mrrobot" name="favseries">
+                        <label for="Mrrobot">Mr robot</label><br>
+                    </li>
+                    <li>
+                        <p>What is Georgette's favorite Game?</p>
+                        <input type="radio" id="The last of us" name="favgame">
+                        <label for="The last of us">The last of us</label><br>
+                        <input type="radio" id="Life is strange" name="favgame">
+                        <label for="Life is strange">Life is strange</label><br>
+                        <input type="radio" id="Beyond: two souls" name="favgame">
+                        <label for="Beyond: two souls">Beyond: two souls</label><br>
+                        <input type="radio" id="Fahrenheit" name="favgame">
+                        <label for="Fahrenheit">Fahrenheit</label><br>
+                    </li>
+                </ol>
+            </form>
+        </div>
     </body>
 </html> 
