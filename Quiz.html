@@ -3,55 +3,179 @@
     <head>
         <Link rel="Stylesheet" type="text/css" href="./mystyle.css">
         <title>Quiz</title>
+        <script>
+            function submitQuiz(){
+                const correctAnswers = {
+                    q1: "Jupiter",
+                    q2: "William Shakespeare",
+                    q3: "Paris",
+                    q4: "Neil Armstrong",
+                    q5: "The Nile",
+                    q6: "Japan",
+                    q7: "Diamond",
+                };
+
+                let score = 0;
+
+                for (let question in correctAnswers) {
+
+                    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+
+                    if (selectedOption) {
+
+                        if (selectedOption.value === correctAnswers[question]) {
+
+                        }
+                    }
+                }
+                // Display the user's score
+            alert(`You scored ${score} out of ${Object.keys(correctAnswers).length}`);
+        }
+        </script>
     </head>
     <body class="quizbody">
         <div class="quiz-container">
-            <h1>How well do you know Georgette?</h1>
+            <h1>Test your general knowledge</h1>
             <h3>Take this quiz to find out</h3>
             <form>
-                <ol>
-                    <li>
-                        <label for="birthday">What is Georgette's birthday?</label>
-                        <input type="date" id="birthday" name="birthday">
-                    </li>
-                    <li>
-                        <p>What is Georgette's favorite weather?</p>
-                        <input type="radio" id="Summer" name="weather">
-                        <label for="Summer">Summer</label><br>
-                        <input type="radio" id="Spring" name="weather">
-                        <label for="Spring">Spring</label><br>
-                        <input type="radio" id="Autumn" name="weather">
-                        <label for="Autumn">Autumn</label><br>
-                        <input type="radio" id="Winter" name="weather">
-                        <label for="Winter">Winter</label><br>
-                    </li>
-                    <li>
-                        <label for="favcolor">What is Georgette's favorite color?</label>
-                        <input type="color" id="favcolor" name="favcolor">
-                    </li>
-                    <li>
-                        <p>What is Georgette's favorite series?</p>
-                        <input type="radio" id="You" name="favseries">
-                        <label for="You">You</label><br>
-                        <input type="radio" id="Gameofthrones" name="favseries">
-                        <label for="Gameofthrones">Game of thrones</label><br>
-                        <input type="radio" id="Lordoftherings" name="favseries">
-                        <label for="Lordoftherings">Lord of the rings</label><br>
-                        <input type="radio" id="Mrrobot" name="favseries">
-                        <label for="Mrrobot">Mr robot</label><br>
-                    </li>
-                    <li>
-                        <p>What is Georgette's favorite Game?</p>
-                        <input type="radio" id="The last of us" name="favgame">
-                        <label for="The last of us">The last of us</label><br>
-                        <input type="radio" id="Life is strange" name="favgame">
-                        <label for="Life is strange">Life is strange</label><br>
-                        <input type="radio" id="Beyond: two souls" name="favgame">
-                        <label for="Beyond: two souls">Beyond: two souls</label><br>
-                        <input type="radio" id="Fahrenheit" name="favgame">
-                        <label for="Fahrenheit">Fahrenheit</label><br>
-                    </li>
-                </ol>
+                <div id="quiz">
+                    <ol>
+                        <li>
+                            <p>What is the largest planet in our solar system?</p><br>
+                            <input type="radio" name="q1" value="Mercury" id="q1-mercury">
+                            <label class="quizlabel" for="q1-mercury">
+                                <img src="mercury.jpg" alt="Mars" width="100" height="100">Mercury
+                            </label>
+                            <input type="radio" name="q1" value="Mars" id="q1-mars">
+                            <label for="q1-mars">
+                                <img src="mars.jpg" alt="Mars" width="100" height="100">Mars
+                            </label>
+                            <input type="radio" name="q1" value="Jupiter" id="q1-jupiter">
+                            <label for="q1-jupiter">
+                                <img src="jupiter.jpg" alt="Mars" width="100" height="100">Jupiter
+                            </label>
+                            <input type="radio" name="q1" value="Earth" id="q1-earth">
+                            <label for="q1-earth">
+                                <img src="earth.jpg" alt="Mars" width="100" height="100">Earth
+                            </label>
+                        </li>
+                        <li>
+                            <p>Who wrote the play Romeo and Juliet?<p></br>
+                            <input type="radio" name="q2" value="Charles Dickens" id="q2-charles">
+                            <label for="q2-charles">
+                                <img src="charles.jpg" alt="Mars" width="100" height="100">Charles Dickens
+                            </label>
+                            <input type="radio" name="q2" value="William Shakespeare" id="q2-william">
+                            <label for="q2-william">
+                                <img src="william.jpg" alt="Mars" width="100" height="100">William shakespeare
+                            </label>
+                            <input type="radio" name="q2" value="Mark Twain" id="q2-mark">
+                            <label for="q2-mark">
+                                <img src="mark.jpg" alt="Mars" width="100" height="100">Mark twain
+                            </label>
+                            <input type="radio" name="q2" value="Jane Austen" id="q2-jane">
+                            <label for="q2-jane">
+                                <img src="jane.jpg" alt="Mars" width="100" height="100">Jane Austen
+                            </label>
+                        </li>   
+                        <li>
+                            <p>What is the capital city of France?</p>
+                            <input type="radio" name="q3" value="Rome" id="q3-rome">
+                            <label for="q3-rome">
+                                <img src="rome.jpg" alt="Mars" width="100" height="100">Rome
+                            </label>
+                            <input type="radio" name="q3" value="Berlin" id="q3-berlin">
+                            <label for="q3-berlin">
+                                <img src="berlin.jpg" alt="Mars" width="100" height="100">Berlin
+                            </label>
+                            <input type="radio" name="q3" value="Paris" id="q3-paris">
+                            <label for="q3-paris">
+                                <img src="paris.jpg" alt="Mars" width="100" height="100">Paris
+                            </label>
+                            <input type="radio" name="q3" value="Madrid" id="q3-madrid">
+                            <label for="q3-madrid">
+                                <img src="madrid.jpg" alt="Mars" width="100" height="100">Madrid
+                            </label>
+                        </li>   
+                        <li>
+                            <p>Who was the first person to walk on the Moon?</p>
+                            <input type="radio" name="q4" value="Yuri Gagarin" id="q4-yuri">
+                            <label for="q4-yuri">
+                                <img src="yuri.jpg" alt="Mars" width="100" height="100">Yuri Gagarin
+                            </label>
+                            <input type="radio" name="q4" value="Buzz Aldrin" id="q4-buzz">
+                            <label for="q4-buzz">
+                                <img src="buzz.jpg" alt="Mars" width="100" height="100">Buzz Aldrin
+                            </label>
+                            <input type="radio" name="q4" value="Neil Armstrong" id="q4-neil">
+                            <label for="q4-neil">
+                                <img src="neil.jpg" alt="Mars" width="100" height="100">Neil Armstrong
+                            </label>
+                            <input type="radio" name="q4" value="John Glenn" id="q4-john">
+                            <label for="q4-john">
+                                <img src="john.jpg" alt="Mars" width="100" height="100">John Glenn
+                            </label>
+                        </li>   
+                        <li>
+                            <p>What is the longest river in the world?</p>
+                            <input type="radio" name="q5" value="Amazon" id="q5-amazon">
+                            <label for="q5-amazon">
+                                <img src="amazon.jpg" alt="Mars" width="100" height="100">Amazon
+                            </label>
+                            <input type="radio" name="q5" value="The Nile" id="q5-nile">
+                            <label for="q5-nile">
+                                <img src="nile.jpg" alt="Mars" width="100" height="100">The Nile
+                            </label>
+                            <input type="radio" name="q5" value="Yangtze" id="q5-yangtze">
+                            <label for="q5-yangtze">
+                                <img src="yangtze.jpg" alt="Mars" width="100" height="100">Yangtze
+                            </label>
+                            <input type="radio" name="q5" value="Ganges" id="q5-ganges">
+                            <label for="q5-ganges">
+                                <img src="ganges.jpg" alt="Mars" width="100" height="100">Ganges
+                            </label>
+                        </li>     
+                        <li>
+                            <p>Which country is known as the Land of the Rising Sun?</p>
+                            <input type="radio" name="q6" value="China" id="q6-china">
+                            <label for="q6-china">
+                                <img src="china.png" alt="Mars" width="100" height="100">China
+                            </label>
+                            <input type="radio" name="q6" value="Japan" id="q6-japan">
+                            <label for="q6-japan">
+                                <img src="japan.png" alt="Mars" width="100" height="100">Japan
+                            </label>
+                            <input type="radio" name="q6" value="South Korea" id="q6-southkorea">
+                            <label for="q6-southkorea">
+                                <img src="southkorea.jpg" alt="Mars" width="100" height="100">South korea
+                            </label>
+                            <input type="radio" name="q6" value="Thailand" id="q6-thailand">
+                            <label for="q6-thailand">
+                                <img src="thailand.png" alt="Mars" width="100" height="100">Thailand
+                            </label>
+                        </li>   
+                        <li>
+                            <p>What is the hardest natural substance on Earth?</p>
+                            <input type="radio" name="q7" value="Quartz" id="q7-quartz">
+                            <label for="q7-quartz">
+                                <img src="quartz.jpg" alt="Mars" width="100" height="100">Quartz
+                            </label>
+                            <input type="radio" name="q7" value="Graphite" id="q7-graphite">
+                            <label for="q7-graphite">
+                                <img src="graphite.jpg" alt="Mars" width="100" height="100">Graphite
+                            </label>
+                            <input type="radio" name="q7" value="Diamond" id="q7-diamond">
+                            <label for="q7-diamond">
+                                <img src="diamond.jpg" alt="Mars" width="100" height="100">Diamond
+                            </label>
+                            <input type="radio" name="q7" value="Ruby" id="q7-ruby">
+                            <label for="q7-ruby">
+                                <img src="ruby.jpg" alt="Mars" width="100" height="100">Ruby
+                            </label>
+                        </li>    
+                    </ol>
+                    <button type="button" onclick="submitQuiz()">Submit</button>
+                </div>
             </form>
         </div>
     </body>
