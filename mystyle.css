@@ -461,6 +461,24 @@ p{
     border-right:50px solid #fff;
 
 }
+ 
+#quiz label {
+    cursor: pointer; /* Change cursor to pointer */
+    display: inline-block;
+    margin: 5px;
+    border: 2px solid transparent; /* Default border */
+    border-radius: 8px; /* Rounded edges */
+  }
+  
+#quiz label img {
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.2s, border 0.2s; /* Smooth hover and selection effect */
+  }
+  
+#quiz label img:hover {
+    transform: scale(1.1); /* Slight zoom efect */
+  }
 
 
 
